@@ -36,7 +36,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 parallel(deploy: {
-                    sh 'docker build -t Samsara .'
+                    sh 'docker build -t samsara .'
                 },
                 archive: {
                     archive 'target/*.jar'
